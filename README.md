@@ -11,7 +11,7 @@ Recebe um email cadastrado e retorna um JWT válido por 1 hora.
 #### curl
 
 ```bash
-curl -X POST https://seu-dominio.vercel.app/api/token \
+curl -X POST https://house-of-dragons-pi.vercel.app/api/token \
   -H "Content-Type: application/json" \
   -d '{"email": "karina@rede.ulbra.br"}'
 ```
@@ -19,7 +19,7 @@ curl -X POST https://seu-dominio.vercel.app/api/token \
 #### fetch
 
 ```js
-const response = await fetch("https://seu-dominio.vercel.app/api/token", {
+const response = await fetch("https://house-of-dragons-pi.vercel.app/api/token", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ email: "karina@rede.ulbra.br" }),
@@ -52,7 +52,7 @@ Registra um plano para um email. Requer Bearer token no header.
 #### curl
 
 ```bash
-curl -X POST https://seu-dominio.vercel.app/api/plan \
+curl -X POST https://house-of-dragons-pi.vercel.app/api/plan \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
   -d '{"email": "teste@exemplo.com", "plan": "PLATINUM"}'
@@ -61,7 +61,7 @@ curl -X POST https://seu-dominio.vercel.app/api/plan \
 #### fetch
 
 ```js
-const response = await fetch("https://seu-dominio.vercel.app/api/plan", {
+const response = await fetch("https://house-of-dragons-pi.vercel.app/api/plan", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -88,7 +88,7 @@ console.log(data);
 ### Exemplo completo com fetch (token + plano)
 
 ```js
-const BASE_URL = "https://seu-dominio.vercel.app";
+const BASE_URL = "https://house-of-dragons-pi.vercel.app";
 
 // 1. pegar o token
 const tokenRes = await fetch(`${BASE_URL}/api/token`, {
