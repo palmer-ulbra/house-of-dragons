@@ -13,7 +13,7 @@ Recebe um email cadastrado e retorna um JWT válido por 1 hora.
 ```bash
 curl -X POST https://house-of-dragons-pi.vercel.app/api/token \
   -H "Content-Type: application/json" \
-  -d '{"email": "karina@rede.ulbra.br"}'
+  -d '{"email": "palmer.oliveira@ulbra.br"}'
 ```
 
 #### fetch
@@ -22,7 +22,7 @@ curl -X POST https://house-of-dragons-pi.vercel.app/api/token \
 const response = await fetch("https://house-of-dragons-pi.vercel.app/api/token", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ email: "karina@rede.ulbra.br" }),
+  body: JSON.stringify({ email: "palmer.oliveira@ulbra.br" }),
 });
 
 const { token } = await response.json();
@@ -94,7 +94,7 @@ const BASE_URL = "https://house-of-dragons-pi.vercel.app";
 const tokenRes = await fetch(`${BASE_URL}/api/token`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ email: "karina@rede.ulbra.br" }),
+  body: JSON.stringify({ email: "palmer.oliveira@ulbra.br" }),
 });
 const { token } = await tokenRes.json();
 
